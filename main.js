@@ -39,7 +39,7 @@ const users = {
 }
 function parsUsers(obj){
     let {id, name, username, email, address: { street, suite, city, zipcode, geo: { lat, lng } }, phone, website, } = obj,
-        userid = `user id ${id}`
+        userid = `user id ${id}\n`
     usersname = `Foydalanuvchning ismi ${name}\n`
     userName = `Foydalanuvchning useri ${username}\n`
     useremail = `Foydalanuvchning emaili ${email}\n`
@@ -47,7 +47,7 @@ function parsUsers(obj){
     usergeo = `Lakatsiya\n lat: ${lat}\n lng: ${lng}`,
     userphone = `telefon ${phone}`,
     userwebsite = `web saty ${website}`,
-    userInfo = `${id}${usersname},${userName},${useremail},${useraddress},${usergeo},${userphone},${userwebsite},`
+    userInfo = `${userid}${usersname},${userName},${useremail},${useraddress},${usergeo},${userphone},${userwebsite},`
      return userInfo
 }
 for (const obj in users) {
